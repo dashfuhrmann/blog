@@ -24,6 +24,7 @@ export async function generateMetadata({ params: { slug } }: Props) {
 
   const post: Post = await client.fetch(query, { slug });
 
+  // generate metaData
   return {
     title: post.title,
     description: post.description,
